@@ -1,1 +1,1 @@
-# cengizhanparlak.github.io
+# Blog thingy
