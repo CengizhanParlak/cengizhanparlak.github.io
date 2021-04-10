@@ -1,0 +1,20 @@
+.container {
+    height: 200px;
+    position: relative;
+  }
+  
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+#inProgress {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 280%;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}
