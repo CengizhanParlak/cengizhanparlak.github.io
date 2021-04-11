@@ -12,7 +12,7 @@
     transform: translate(-50%, -50%);
   }
 #inProgress {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Kiwi Maru', Geneva, Tahoma, sans-serif;
     /* font-size: 280%; */
     font-size: 4em;
     font-weight: 800;
@@ -20,6 +20,6 @@
     text-align: center;
 }
 
-p {
+/* p {
   font-family: 'Kiwi Maru', serif;
-}
+} */
