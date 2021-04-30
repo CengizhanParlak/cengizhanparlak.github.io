@@ -1,26 +1,26 @@
+/* * {
+   border: red solid 1px;
+} */
+
 .container {
-    height: 200px;
-    position: relative;
-  }
-  
-  .center {
-    margin: 0;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-  
-#inProgress {
-    font-family: 'Kiwi Maru' , serif;
-    /* font-size: 280%; */
-    font-size: 4em;
-    font-weight: 800;
-    color: white;
-    text-align: center;
+   height: 200px;
+   position: relative;
 }
 
-/* p {
-  font-family: 'Kiwi Maru', serif;
-} */
+.center {
+   margin: 0;
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+}
+
+.welcome {
+   text-align: center;
+   font-family: 'Kiwi Maru', serif;
+}
+
+.contact-socials-items>a {
+   margin-inline: 0.5em;
+}
