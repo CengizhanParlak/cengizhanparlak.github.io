@@ -1,1 +1,1 @@
-# Blog thingy
+# Personal Blog
