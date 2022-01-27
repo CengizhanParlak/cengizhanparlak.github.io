@@ -11,6 +11,8 @@ html {
 
 .container-main {
   padding-top: 70px;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .welcome {
