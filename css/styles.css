@@ -3,6 +3,8 @@
 body {
   background-color: #121212;
   color: white;
+  width: 100%;
+  height: 100%;
 }
 
 html {
@@ -10,7 +12,7 @@ html {
 }
 
 .container-main {
-  padding-top: 70px;
+  padding-top: 25%;
   padding-left: 15%;
   padding-right: 15%;
 }
