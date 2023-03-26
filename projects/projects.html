@@ -16,7 +16,7 @@
   <body>
     <h1 class="title">Personal Projects</h1>
     <div id="container">
-      <div class="card item">
+      <div class="card item mt-5">
         <h3>Phrasal Verb Dictionary</h3>
         <p class="project-summary">
           The Phrasal Verb Dictionary is a comprehensive mobile application that
@@ -33,11 +33,13 @@
           information you need to master phrasal verbs. Try it out today and
           take your English to the next level!
         </p>
-        <button class="read-more-button">
+        <button
+          onclick="openPage('https://www.brighttech.dev/phrasal-verb-dictionary/')"
+        >
           Read More<i class="fa fa-chevron-right"></i>
         </button>
       </div>
-      <div class="card item">
+      <div class="card item mt-5">
         <h3>Ingilizce Kelime Ogren</h3>
         <p class="project-summary">
           Mobile application designed to help Turkish speakers learn English
@@ -55,33 +57,42 @@
           resource for Turkish speakers looking to expand their English
           vocabulary.
         </p>
-        <button>Read More<i class="fa fa-chevron-right"></i></button>
+        <button onclick="openPage('https://www.brighttech.dev/word-factory/')">
+          Read More<i class="fa fa-chevron-right"></i>
+        </button>
       </div>
     </div>
     <h1 class="title">Other Projects</h1>
     <span class="empty-space"></span>
     <div id="container">
-      <div class="card item">
+      <div class="card item mt-5">
         <h3>Parmarine®</h3>
         <p class="project-summary">
-          Introducing a mobile application designed to help boat owners manage
-          their boat's maintenance needs with ease. This app is designed for a
-          technical service provider and offers a range of features to enhance
-          the boat owner's experience. Users can enter their boat information,
-          view real-time weather updates in their location, and book
-          appointments with the technical service provider. The app also allows
-          users to view the progress of their appointments and receive updates
-          on their boat's repair status. Technical service staff can access
-          appointment requests, make necessary adjustments, and communicate with
-          boat owners about the situation and updates of the appointment.
-          Additionally, the app allows staff to list users and view the
-          information of each user with ease. With this mobile application, boat
-          owners can enjoy a seamless maintenance experience, and technical
-          service staff can efficiently manage appointment requests and
-          communicate with boat owners to provide exceptional service.
+          Mobile application designed to help boat owners manage their boat's
+          maintenance needs with ease. This app is designed for a technical
+          service provider and offers a range of features to enhance the boat
+          owner's experience. Users can enter their boat information, view
+          real-time weather updates in their location, and book appointments
+          with the technical service provider. The app also allows users to view
+          the progress of their appointments and receive updates on their boat's
+          repair status. Technical service staff can access appointment
+          requests, make necessary adjustments, and communicate with boat owners
+          about the situation and updates of the appointment. Additionally, the
+          app allows staff to list users and view the information of each user
+          with ease. With this mobile application, boat owners can enjoy a
+          seamless maintenance experience, and technical service staff can
+          efficiently manage appointment requests and communicate with boat
+          owners to provide exceptional service.
         </p>
-        <button>Read More<i class="fa fa-chevron-right"></i></button>
+        <button onclick="openPage('parmarine.html')">
+          Read More<i class="fa fa-chevron-right"></i>
+        </button>
       </div>
     </div>
   </body>
+  <script>
+    function openPage(page) {
+      window.location.href = page;
+    }
+  </script>
 </html>

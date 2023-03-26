@@ -25,12 +25,18 @@ h5,
 h6 {
   font-family: "Poppins", "Helvetica", sans-serif;
   font-weight: 600;
+  color: black;
 }
 
 .container-main {
   padding-top: 25%;
   padding-left: 15%;
   padding-right: 15%;
+}
+
+.centered-div {
+  text-align: center;
+  max-width: 75%;
 }
 
 .welcome {
@@ -125,12 +131,13 @@ h2::after {
 
 a {
   font-size: 18px;
+  font-family: "Poppins", "Helvetica", sans-serif;
   text-decoration: underline;
   transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
 }
 
 /* Link hover styles */
 a:hover {
-  transition: font-weight 0.3s ease-in-out;
-  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  color: #54bab9;
 }

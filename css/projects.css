@@ -2,12 +2,13 @@
   width: 250px;
   height: 350px;
   border-radius: 10px;
-  margin-right: 50px;
+  margin-right: 75px;
   margin-bottom: 50px;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.246);
   padding: 20px;
   background-color: #f7ecde;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  position: relative;
 }
 
 .card:hover {
@@ -26,14 +27,22 @@
   margin-bottom: 20px;
 }
 
+.card.expanded {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .card button {
   background-color: #54bab9;
   color: #ffffff;
   border: none;
+  position: absolute;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
   float: right;
 }
 
@@ -74,10 +83,15 @@
   -webkit-line-clamp: 9;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-align: left;
 }
 
 .empty-space {
   padding-bottom: 100px;
+}
+
+.padding-left {
+  padding-left: 50px;
 }
 
 #container {
