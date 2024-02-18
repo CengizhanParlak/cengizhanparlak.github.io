@@ -1,66 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="icon" type="image/x-icon" href="/images/brand.ico" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    /> -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cengizhan Parlak</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="icon" href="images/code_book.png" type="image/x-icon" />
+    <title>Cengiz Han Parlak</title>
   </head>
 
   <body>
-    <header>
-      <div id="myDiv">
-        <p class="centeredP">
-          <a
-            class="link-to-page"
-            style="margin-right: 25px"
-            href="projects/index.html"
-            >Projects</a
-          >
-          <!-- <a class="link-to-page" href="blog/index.html">Blog</a> -->
-        </p>
-      </div>
-    </header>
-    <div class="container container-main">
-      <article class="intro">
-        <div>
-          <div>
-            <p class="welcome mt-5">
-              Software developer and a computer engineering grad. Currently,
-              developing Mobile Applications with Flutter.
-            </p>
-            <p class="welcome mt-5">
-              You can get in touch with me from the links below:
-            </p>
-          </div>
-
-          <div class="centered">
-            <a
-              href="https://www.linkedin.com/in/cengizhanparlak"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin fa-3x"></i>
-            </a>
-            <a href="https://github.com/CengizhanParlak" target="_blank">
-              <i class="fa-brands fa-github fa-3x"></i
-            ></a>
-            <a href="mailto:cengizhan.parlak@outlook.com">
-              <i class="fa-solid fa-envelope fa-3x"></i>
-              ></a
-            >
-          </div>
+    <!-- PFP & Summary start -->
+    <div class="main-container">
+      <section id="pfp-and-summary">
+        <div class="circle-avatar pb-3">
+          <img src="images/pfp.webp" alt="Cengiz Han Parlak" class="avatar" />
         </div>
-      </article>
+        <div class="center">
+          <h1 class="title mb-5">Cengiz Han Parlak</h1>
+          <div class="mb-5">
+            <a href="https://linkedin.com/in/cengizhanparlak" target="blank">
+              <image src="images/linkedin.png" alt="linkedin" class="icon" />
+            </a>
+            <a href="https://github.com/CengizhanParlak" target="blank">
+              <image src="images/github.png" alt="github" class="icon" />
+            </a>
+            <a href="mailto:cengizhan.parlak@outlook.com" target="blank">
+              <image src="images/gmail.png" alt="gmail" class="icon" />
+            </a>
+          </div>
+          <p class="display-large">
+            Software developer with a passion for learning. Have experience in
+            developing mobile applications with Flutter and backend systems with
+            Java. <br /><br />Also interested in AI and have experience in
+            training deep learning models.
+          </p>
+        </div>
+        <div class="divider"></div>
+      </section>
+      <!-- PFP & Summary end -->
+
+      <!-- Experience start -->
+      <section id="experience">
+        <!-- Experience example 1 start -->
+        <section class="experience-example" id="experience-01">
+          <div class="container">
+            <span class="display-medium-bold mr-4">Orion Innovation</span>
+            <div class="container">
+              <span class="display-small mr-2">2024/2 -</span>
+              <div class="is-present"></div>
+              <span class="present-chip display-small">present</span>
+            </div>
+          </div>
+          <p class="display-medium">Senior Flutter Developer</p>
+          <div class="container">
+            <ul class="verticalLine">
+              <li>
+                Rewriting a hunting app used by 500K+ people in U.S at hunting
+                season.
+              </li>
+              <li>Working in an international team with 20+ people.</li>
+            </ul>
+          </div>
+        </section>
+        <!-- Experience example 1 end -->
+
+        <!-- Experience example 2 start -->
+        <section class="experience-example" id="experience-02">
+          <div class="container">
+            <span class="display-medium-bold mr-4">Nexoft Mobile</span>
+            <div class="container">
+              <span class="display-small mr-2">2022/4 - 2023/10</span>
+              <div></div>
+              <span class="present-chip display-small">present</span>
+            </div>
+          </div>
+          <p class="display-medium">Flutter Developer</p>
+          <div class="container">
+            <ul>
+              <li>Developed fitness & health applications.</li>
+              <li>Total 20 apps with flavors, achieved 40K+ DAU, 1M+ MAU.</li>
+              <li>Studio is one of the top contenders for fitness category.</li>
+            </ul>
+          </div>
+        </section>
+        <!-- Experience example 2 end -->
+
+        <!-- Experience example 3 start -->
+        <section class="experience-example" id="experience-03">
+          <div class="container">
+            <span class="display-medium-bold mr-4">Sekerbank T.A.S.</span>
+            <div class="container">
+              <span class="display-small mr-2">2021/8 - 2022/4</span>
+              <div></div>
+              <span class="present-chip display-small">present</span>
+            </div>
+          </div>
+          <p class="display-medium">Backend Developer</p>
+          <div class="container">
+            <ul>
+              <li>Maintained core banking systems written in Java.</li>
+              <li>Fixed ongoing bugs, implemented new features.</li>
+            </ul>
+          </div>
+        </section>
+        <!-- Experience example 3 end -->
+
+        <!-- Experience example 4 start -->
+        <section class="experience-example" id="experience-04">
+          <div class="container">
+            <span class="display-medium-bold mr-4">Baykar Technologies</span>
+            <div class="container">
+              <span class="display-small mr-2">2021/5 - 2021/8</span>
+              <div></div>
+              <span class="present-chip display-small">present</span>
+            </div>
+          </div>
+          <p class="display-medium">AI Engineer Intern</p>
+          <div class="container">
+            <ul>
+              <li>
+                Customized, trained and compared deep learning models on
+                essential tasks.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- Experience example 4 end -->
+      </section>
+      <!-- Experience end -->
     </div>
   </body>
 </html>

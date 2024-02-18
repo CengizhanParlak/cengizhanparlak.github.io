@@ -1,3 +1,12 @@
+:root {
+  --home-page-bg-color: #222222;
+  --main-text-color: #ffffff;
+}
+
+.body  {
+  background-color: var(--home-page-bg-color);
+}
+
 .card {
   width: 250px;
   height: 350px;

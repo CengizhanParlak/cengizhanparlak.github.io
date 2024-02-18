@@ -1,0 +1,169 @@
+// _utilities.scss
+
+$spacing-unit: 8px; // Set the base spacing unit
+
+@mixin spacing($property, $value) {
+  #{$property}: $value * $spacing-unit;
+}
+
+// Margin utility classes
+.m-1 {
+  @include spacing(margin, 0.25);
+}
+.m-2 {
+  @include spacing(margin, 0.5);
+}
+.m-3 {
+  @include spacing(margin, 1);
+}
+.m-4 {
+  @include spacing(margin, 1.5);
+}
+.m-5 {
+  @include spacing(margin, 3);
+}
+
+.mt-1 {
+  @include spacing(margin-top, 0.25);
+}
+.mt-2 {
+  @include spacing(margin-top, 0.5);
+}
+.mt-3 {
+  @include spacing(margin-top, 1);
+}
+.mt-4 {
+  @include spacing(margin-top, 1.5);
+}
+.mt-5 {
+  @include spacing(margin-top, 3);
+}
+
+.mb-1 {
+  @include spacing(margin-bottom, 0.25);
+}
+.mb-2 {
+  @include spacing(margin-bottom, 0.5);
+}
+.mb-3 {
+  @include spacing(margin-bottom, 1);
+}
+.mb-4 {
+  @include spacing(margin-bottom, 1.5);
+}
+.mb-5 {
+  @include spacing(margin-bottom, 3);
+}
+
+.ml-1 {
+  @include spacing(margin-left, 0.25);
+}
+.ml-2 {
+  @include spacing(margin-left, 0.5);
+}
+.ml-3 {
+  @include spacing(margin-left, 1);
+}
+.ml-4 {
+  @include spacing(margin-left, 1.5);
+}
+.ml-5 {
+  @include spacing(margin-left, 3);
+}
+
+.mr-1 {
+  @include spacing(margin-right, 0.25);
+}
+.mr-2 {
+  @include spacing(margin-right, 0.5);
+}
+.mr-3 {
+  @include spacing(margin-right, 1);
+}
+.mr-4 {
+  @include spacing(margin-right, 1.5);
+}
+.mr-5 {
+  @include spacing(margin-right, 3);
+}
+
+// Padding utility classes
+.p-1 {
+  @include spacing(padding, 0.25);
+}
+.p-2 {
+  @include spacing(padding, 0.5);
+}
+.p-3 {
+  @include spacing(padding, 1);
+}
+.p-4 {
+  @include spacing(padding, 1.5);
+}
+.p-5 {
+  @include spacing(padding, 3);
+}
+
+.pt-1 {
+  @include spacing(padding-top, 0.25);
+}
+.pt-2 {
+  @include spacing(padding-top, 0.5);
+}
+.pt-3 {
+  @include spacing(padding-top, 1);
+}
+.pt-4 {
+  @include spacing(padding-top, 1.5);
+}
+.pt-5 {
+  @include spacing(padding-top, 3);
+}
+
+.pb-1 {
+  @include spacing(padding-bottom, 0.25);
+}
+.pb-2 {
+  @include spacing(padding-bottom, 0.5);
+}
+.pb-3 {
+  @include spacing(padding-bottom, 1);
+}
+.pb-4 {
+  @include spacing(padding-bottom, 1.5);
+}
+.pb-5 {
+  @include spacing(padding-bottom, 3);
+}
+
+.pl-1 {
+  @include spacing(padding-left, 0.25);
+}
+.pl-2 {
+  @include spacing(padding-left, 0.5);
+}
+.pl-3 {
+  @include spacing(padding-left, 1);
+}
+.pl-4 {
+  @include spacing(padding-left, 1.5);
+}
+.pl-5 {
+  @include spacing(padding-left, 3);
+}
+
+.pr-1 {
+  @include spacing(padding-right, 0.25);
+}
+.pr-2 {
+  @include spacing(padding-right, 0.5);
+}
+.pr-3 {
+  @include spacing(padding-right, 1);
+}
+.pr-4 {
+  @include spacing(padding-right, 1.5);
+}
+.pr-5 {
+  @include spacing(padding-right, 3);
+}

@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+body {
+  background-color: #222222;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  margin: 5px 0px 5px 15px;
+}
+ul li {
+  font-size: 12px;
+  color: #f5f5f5;
+  padding: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: #4ffc9f;
+}
+
+#pfp-and-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.circle-avatar {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.title {
+  font-size: 16px;
+  color: #f5f5f5;
+  font-weight: 400;
+}
+
+.display-large {
+  font-size: 14px;
+  color: #f5f5f5;
+}
+
+.display-medium {
+  font-size: 12px;
+  color: #f5f5f5;
+}
+
+.display-medium-bold {
+  font-size: 12px;
+  color: #f5f5f5;
+  font-weight: 700;
+}
+
+.display-small {
+  font-size: 10px;
+  color: #f5f5f5;
+}
+
+.center {
+  text-align: center;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #f5f5f5;
+  margin: 20px 0;
+}
+
+.present-chip {
+  background-color: #4ffc9f;
+  color: #2d2d2d;
+  padding: 3px 10px;
+  border-radius: 4px;
+  align-self: center;
+  display: none;
+}
+
+.is-present + .present-chip {
+  display: block;
+}
+
+.experience-example {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .main-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #experience {
+    padding: 0;
+  }
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .main-container {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .main-container {
+    width: 40%;
+  }
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .main-container {
+    width: 40%;
+  }
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .main-container {
+    width: 37%;
+  }
+  #experience {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .main-container {
+    width: 33%;
+  }
+}/*# sourceMappingURL=styles.css.map */
