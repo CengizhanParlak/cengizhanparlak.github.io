@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
 $dark-slate: #222222;
+$gray: #3a3a3a;
 $neon-green: #4ffc9f;
 $white: #ffffff;
 $font-family: "Rubik", sans-serif;
@@ -120,6 +121,11 @@ a {
   width: 32px;
   height: 32px;
   margin: 0 5px;
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .container {
@@ -129,6 +135,10 @@ a {
 
 .space-between {
   justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
 }
 
 .divider {
@@ -155,6 +165,24 @@ a {
   margin-bottom: 30px;
 }
 
+.main-button {
+  background-color: $dark-slate;
+  color: $font-color-primary;
+  padding: 8px 24px;
+  border-radius: 24px;
+  border: 1px solid $gray;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+
+  &:hover {
+    background-color: darken($gray, 50%);
+  }
+}
+
+.disabled {
+  display: none;
+}
+
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
   .main-container {
@@ -176,7 +204,7 @@ a {
 @media (min-width: 641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
   .main-container {
-    width: 40%;
+    width: 50%;
   }
 }
 @media (min-width: 961px) {
