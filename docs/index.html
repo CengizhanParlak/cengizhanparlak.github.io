@@ -38,30 +38,95 @@
               <img src="assets/images/gmail.png" alt="Gmail" class="icon" />
             </a>
           </div>
-          <p class="display-large">
-            I am a software developer with a strong passion for learning. My
-            experience includes developing mobile applications with Flutter and
-            backend systems with Java. I am also interested in AI and have
+          <p class="text-sm text-slate-200">
+            i am a software developer with a strong passion for learning. my
+            experience includes developing mobile applications with flutter and
+            backend systems with java. i am also interested in ai and have
             hands-on experience in training deep learning models.
           </p>
-        </div>
-      </section>
-
-      <!-- Buttons Section -->
-      <section id="buttons" class="pt-3 pb-3 disabled">
-        <div class="container center">
-          <a href="pages/projects" class="main-button mr-4 display-large"
-            >Projects</a
-          >
-          <a href="pages/blog" class="main-button display-large">Blog</a>
         </div>
       </section>
 
       <!-- Divider -->
       <div class="divider"></div>
 
+      <!-- Buttons Section -->
+      <section id="buttons" class="pb-10">
+        <div class="container">
+          <span
+            class="main-button mr-3 display-small selected"
+            id="experience-button"
+            >experience</span
+          >
+          <span
+            class="main-button mr-3 display-small disabled"
+            id="projects-button"
+            >projects</span
+          >
+          <span class="main-button display-small" id="blog-button">blog</span>
+        </div>
+      </section>
+
       <!-- Experience Section -->
-      <section id="experience">
+      <section id="blog-posts-summary" class="disabled">
+        <!-- Experience Example 1 -->
+        <a href="/docs/pages/blog/flutter/svg_color_mapper">
+          <section id="blog-post-01">
+            <span class="text-base text-slate-200 font-bold"
+              >coloring svgs in a complicated way in flutter</span
+            >
+            <div class="py-4">
+              <p class="text-xs text-slate-200">
+                svgs are cool and all but sometimes you need to change their
+                colors. in this blog post, i will show you how to color svgs by
+                using colormapper in flutter.
+              </p>
+            </div>
+            <div class="pt-4 flex space-between">
+              <span class="text-xs text-slate-200">july 08, 2024</span>
+              <span class="text-xs text-slate-200">read more ></span>
+            </div>
+          </section>
+        </a>
+        <!-- Divider - start -->
+        <div class="flex justify-center py-2">
+          <span class="divider-small"></span>
+        </div>
+        <!-- Divider - end -->
+      </section>
+      <!-- End of Experience Section -->
+
+      <!-- Experience Section -->
+      <section id="projects-summary" class="disabled">
+        <p class="center text-white display-medium">
+          no projects yet. check back later.
+        </p>
+        <!-- Experience Example 1 -->
+        <section class="experience-example disabled" id="experience-01">
+          <div class="flex">
+            <span class="display-medium-bold mr-4">English Phrasal Verbs</span>
+            <span class="flex items-center">
+              <span class="display-small mr-2">February 2024 -</span>
+              <div class="is-present"></div>
+              <span class="present-chip display-small">Present</span>
+            </span>
+          </div>
+          <p class="display-medium">Senior Flutter Developer</p>
+          <div class="flex pl-4">
+            <ul>
+              <li>
+                Rewriting a hunting app used by over 500K people in the U.S.
+                during hunting season.
+              </li>
+              <li>Collaborating in an international team with 15+ members.</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <!-- End of Experience Section -->
+
+      <!-- Experience Section -->
+      <section id="experience-summary" class="enabled">
         <!-- Experience Example 1 -->
         <section class="experience-example" id="experience-01">
           <div class="flex">
@@ -146,5 +211,6 @@
       </section>
       <!-- End of Experience Section -->
     </div>
+    <script src="./js/main_page.js"></script>
   </body>
 </html>

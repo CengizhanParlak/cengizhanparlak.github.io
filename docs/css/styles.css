@@ -52,6 +52,10 @@ ul li {
   background-color: yellow;
 }
 
+.page-start {
+  padding-top: 50px;
+}
+
 .circle-avatar {
   width: 150px;
   height: 150px;
@@ -128,6 +132,14 @@ ul li {
   margin: 20px 0;
 }
 
+.divider-small {
+  width: 33%;
+  height: 1px;
+  background-color: #f5f5f5;
+  border-radius: 100px;
+  margin: 10px 0;
+}
+
 .present-chip {
   background-color: #4ffc9f;
   color: #2d2d2d;
@@ -154,6 +166,17 @@ ul li {
   box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.8);
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
+
+.main-button.selected {
+  background-color: #4ffc9f;
+  color: #222222;
+}
+
+.main-button.selected:hover {
+  background-color: #4ffc9f;
+  color: #222222;
+}
+
 .main-button:hover {
   background-color: black;
   box-shadow: 0 0 5px 0 rgb(255, 255, 255);
@@ -163,10 +186,18 @@ ul li {
   display: none;
 }
 
+.enabled {
+  display: block;
+}
+
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
   .main-container {
     width: 80%;
+    margin: 0 auto;
+  }
+  .blog-container {
+    width: 90%;
     margin: 0 auto;
   }
   #experience {
@@ -179,11 +210,19 @@ ul li {
     width: 60%;
     margin: 0 auto;
   }
+  .blog-container {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 @media (min-width: 641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
   .main-container {
     width: 50%;
+  }
+  .blog-container {
+    width: 70%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 961px) {
@@ -191,11 +230,19 @@ ul li {
   .main-container {
     width: 40%;
   }
+  .blog-container {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
   .main-container {
     width: 37%;
+  }
+  .blog-container {
+    width: 50%;
+    margin: 0 auto;
   }
   #experience {
     padding-left: 2em;
@@ -206,5 +253,9 @@ ul li {
   /* hi-res laptops and desktops */
   .main-container {
     width: 33%;
+  }
+  .blog-container {
+    width: 40%;
+    margin: 0 auto;
   }
 } /*# sourceMappingURL=styles.css.map */
