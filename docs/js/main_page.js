@@ -37,6 +37,11 @@ function addButtonListeners() {
 }
 
 function enableSection(button, section) {
+  if (button.classList.contains(selectedClass) && button.id === "blog-button") {
+    window.location.href = "docs/pages/blog";
+    return;
+  }
+  console.log("enabling section");
   disableLastSection();
   disableButton();
   section.classList.add(enabledClass);
