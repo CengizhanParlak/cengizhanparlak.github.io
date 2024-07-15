@@ -15,50 +15,53 @@
     <title>flutter</title>
   </head>
   <body>
-    <div
-      class="flex py-4 items-center justify-center overflow-x-auto whitespace-nowrap"
-    >
-      <a
-        href="/docs/index.html"
-        class="text-sm text-gray-600 dark:text-gray-200 hover:underline"
-        >home</a
-      >
-
-      <span class="mx-1 text-gray-500 dark:text-gray-300">/</span>
-
-      <a
-        href="/docs/pages/blog/"
-        class="text-sm text-gray-600 dark:text-gray-200 hover:underline"
-        >blog</a
-      >
-
-      <span class="mx-1 text-gray-500 dark:text-gray-300"> / </span>
-
-      <a
-        href="/docs/pages/blog/flutter/"
-        class="text-sm text-gray-600 dark:text-gray-200 hover:underline"
-      >
-        flutter
-      </a>
-      <span class="mx-1 text-gray-500 dark:text-gray-300"> / </span>
-
-      <a
-        class="text-sm text-gray-500 dark:text-gray-300 underline hover:underline"
-        >coloring svgs in flutter
-      </a>
+    <!-- Breadcrumb start -->
+    <div class="breadcrumb-div">
+      <a href="docs/index.html" class="breadcrumb">home</a>
+      <span class="crumb-seperator">></span>
+      <a href="docs/pages/blog" class="breadcrumb">blog</a>
+      <span class="crumb-seperator">></span>
+      <a href="docs/pages/blog/flutter" class="breadcrumb active">flutter</a>
     </div>
+    <!-- Breadcrumb end -->
+    <!-- Categories start -->
+    <section id="buttons" class="blog-container py-10">
+      <div class="container flex-wrap center">
+        <a href="docs/pages/blog/flutter" class="main-button" id="flutter"
+          >flutter</a
+        >
+        <a class="main-button disabled" id="dart">dart</a>
+        <a class="main-button disabled" id="oop">oop</a>
+        <a class="main-button disabled" id="programming">programming</a>
+        <a class="main-button disabled" id="programming">not much</a>
+        <a class="main-button disabled" id="programming">free-form</a>
+      </div>
+    </section>
+    <!-- Categories end -->
     <div class="blog-container">
-      <section class="py-5" id="blog-post-01">
-        <h1 class="text-lg font-bold pb-5 center">coloring svgs in flutter</h1>
-
-        <p class="display-large text-slate-200">
-          i have been working on a project where i need to color svg images
-          dynamically. i have tried to use the color_filter package but it did
-          not work as expected. i have also tried to use the svg package but it
-          did not work as expected either. i have finally found a way to color
-          svg images dynamically and i would like to share it with you.
-        </p>
+      <!-- Blog Summary Section -->
+      <section id="blog-posts-summary">
+        <!-- Blog Summary Example 1 -->
+        <a href="/docs/pages/blog/flutter/svg_color_mapper">
+          <section id="blog-post-01" class="blog-post-summary">
+            <span class="text-base text-slate-200 font-bold"
+              >coloring svgs in flutter</span
+            >
+            <div class="py-4">
+              <p class="text-xs text-slate-200">
+                svgs are cool and all but sometimes you need to change their
+                colors. in this blog post, i will show you how to color svgs by
+                using colormapper in flutter.
+              </p>
+            </div>
+            <div class="pt-4 flex space-between">
+              <span class="text-xs text-slate-200">july 08, 2024</span>
+              <span class="read-more-text">read more >></span>
+            </div>
+          </section>
+        </a>
       </section>
+      <!-- End of Blog Summary Section -->
     </div>
   </body>
 </html>

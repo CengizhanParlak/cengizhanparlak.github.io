@@ -15,30 +15,35 @@
     <title>blog</title>
   </head>
   <body>
-    <div
-      class="breadcrumb flex py-4 items-center justify-center overflow-x-auto whitespace-nowrap"
-    >
-      <a
-        href="/docs/index.html"
-        class="text-sm text-gray-600 dark:text-gray-200 hover:underline"
-        >home</a
-      >
-
-      <span class="mx-1 text-gray-500 dark:text-gray-300">/</span>
-
-      <a class="active text-sm text-gray-600 dark:text-gray-200 hover:underline"
-        >blog</a
-      >
+    <!-- Breadcrumb start -->
+    <div class="breadcrumb-div">
+      <a href="/docs/index.html" class="breadcrumb">home</a>
+      <span class="crumb-seperator">></span>
+      <a class="breadcrumb active">blog</a>
     </div>
-    <div class="main-container py-10"></div>
+    <!-- Breadcrumb end -->
+    <!-- Categories start -->
+    <section id="buttons" class="blog-container py-10">
+      <div class="container flex-wrap center">
+        <a href="docs/pages/blog/flutter" class="main-button" id="flutter"
+          >flutter</a
+        >
+        <a class="main-button disabled" id="dart">dart</a>
+        <a class="main-button disabled" id="oop">oop</a>
+        <a class="main-button disabled" id="programming">programming</a>
+        <a class="main-button disabled" id="programming">not much</a>
+        <a class="main-button disabled" id="programming">free-form</a>
+      </div>
+    </section>
+    <!-- Categories end -->
     <div class="blog-container">
       <!-- Blog Summary Section -->
       <section id="blog-posts-summary">
         <!-- Blog Summary Example 1 -->
         <a href="/docs/pages/blog/flutter/svg_color_mapper">
-          <section id="blog-post-01">
+          <section id="blog-post-01" class="blog-post-summary">
             <span class="text-base text-slate-200 font-bold"
-              >coloring svgs in a complicated way in flutter</span
+              >coloring svgs in flutter</span
             >
             <div class="py-4">
               <p class="text-xs text-slate-200">
@@ -49,15 +54,10 @@
             </div>
             <div class="pt-4 flex space-between">
               <span class="text-xs text-slate-200">july 08, 2024</span>
-              <span class="text-xs text-slate-200">read more ></span>
+              <span class="read-more-text">read more >></span>
             </div>
           </section>
         </a>
-        <!-- Divider - start -->
-        <div class="flex justify-center py-2">
-          <span class="divider-small"></span>
-        </div>
-        <!-- Divider - end -->
       </section>
       <!-- End of Blog Summary Section -->
     </div>
