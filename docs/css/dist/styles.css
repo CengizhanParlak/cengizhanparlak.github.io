@@ -653,32 +653,18 @@ video {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .breadcrumb:hover{
   text-decoration-line: underline;
 }
 
-@media (prefers-color-scheme: dark){
-  .breadcrumb{
-    --tw-text-opacity: 1;
-    color: rgb(229 231 235 / var(--tw-text-opacity));
-  }
-}
-
 .crumb-seperator{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
   --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-@media (prefers-color-scheme: dark){
-  .crumb-seperator{
-    --tw-text-opacity: 1;
-    color: rgb(209 213 219 / var(--tw-text-opacity));
-  }
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .blog-summary-header{
@@ -1065,6 +1051,7 @@ ul li {
 .main-button.selected {
   background-color: #4ffc9f;
   color: #222222;
+  pointer-events: none;
 }
 
 .main-button.selected:hover {
