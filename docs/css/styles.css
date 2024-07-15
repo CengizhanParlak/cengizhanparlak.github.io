@@ -293,4 +293,20 @@ ul li {
   .crumb-seperator {
     @apply mx-1 text-gray-500 dark:text-gray-300;
   }
+
+  .blog-summary-header {
+    @apply text-base text-slate-200 font-bold;
+  }
+
+  .blog-summary-text {
+    @apply text-xs text-slate-200;
+  }
+
+  .blog-header {
+    @apply text-lg font-bold pb-5 pt-20   center;
+  }
+
+  .blog-text {
+    @apply display-large text-slate-200;
+  }
 }

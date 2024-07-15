@@ -681,13 +681,40 @@ video {
   }
 }
 
-.m-4{
-  margin: 1rem;
+.blog-summary-header{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
 }
 
-.mx-1{
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
+.blog-summary-text{
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
+}
+
+.blog-header{
+  padding-bottom: 1.25rem;
+  padding-top: 5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+}
+
+.blog-text{
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
+  font-size: 14px;
+  color: #f5f5f5;
+}
+
+.m-4{
+  margin: 1rem;
 }
 
 .mx-auto{
@@ -777,14 +804,6 @@ video {
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
-.overflow-x-auto{
-  overflow-x: auto;
-}
-
-.whitespace-nowrap{
-  white-space: nowrap;
-}
-
 .bg-cover{
   background-size: cover;
 }
@@ -811,17 +830,8 @@ video {
   padding-bottom: 1rem;
 }
 
-.py-5{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .pb-10{
   padding-bottom: 2.5rem;
-}
-
-.pb-5{
-  padding-bottom: 1.25rem;
 }
 
 .pl-4{
@@ -850,11 +860,6 @@ video {
   line-height: 1.5rem;
 }
 
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -867,16 +872,6 @@ video {
 
 .font-bold{
   font-weight: 700;
-}
-
-.text-gray-500{
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.text-gray-600{
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .text-red-500{
@@ -892,10 +887,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.underline{
-  text-decoration-line: underline;
 }
 
 body {
@@ -1194,17 +1185,5 @@ ul li {
 
   .md\:text-center{
     text-align: center;
-  }
-}
-
-@media (prefers-color-scheme: dark){
-  .dark\:text-gray-200{
-    --tw-text-opacity: 1;
-    color: rgb(229 231 235 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-gray-300{
-    --tw-text-opacity: 1;
-    color: rgb(209 213 219 / var(--tw-text-opacity));
   }
 }
