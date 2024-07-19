@@ -1,48 +1,29 @@
 #!/bin/bash
 
-# Run this script to change the environment variables in the HTML files
-# Usage: ./change_envs.sh [directory] [--dev|<empty>]
+# Set the directory to search
+search_dir="docs"
 
-# Function to traverse directories and process HTML files
-process_files() {
-    local dir="$1"
-    local dev_mode="$2"
+# Default mode is production (changing docs/ to ./)
+mode="prod"
 
-    # Loop through each item in the directory
-    for item in "$dir"/*; do
-        if [ -d "$item" ]; then
-            # Recursively traverse the subdirectory
-            process_files "$item" "$dev_mode"
-        elif [ -f "$item" ] && [[ "$item" == *.html ]]; then
-            # Process the HTML file
-            echo "Processing $item"
-            if [ "$dev_mode" == "true" ]; then
-                sed -i '' '/<!--/,/-->/!s|<base href="https://www.cengizhanparlak.com/" target="_self" />|<base href="http://127.0.0.1:3000" target="_self" />|g' "$item"
-                sed -i '' '/<!--/,/-->/!s|href="\./|href="docs/|g' "$item"
-                sed -i '' '/<!--/,/-->/!s|src="\./|src="docs/|g' "$item"
-            else
-                sed -i '' '/<!--/,/-->/!s|<base href="http://127.0.0.1:3000" target="_self" />|<base href="https://www.cengizhanparlak.com/" target="_self" />|g' "$item"
-                sed -i '' '/<!--/,/-->/!s|href="docs/|href="./|g' "$item"
-                sed -i '' '/<!--/,/-->/!s|src="docs/|src="./|g' "$item"
-            fi
-            echo "Processed $item"
-        fi
-    done
-}
+# Check if --dev argument is passed
+if [[ "$1" == "--dev" ]]; then
+    mode="dev"
+fi
 
-# Parse the command line arguments
-dev_mode="false"
-directory="."
-
-for arg in "$@"; do
-    if [ "$arg" == "--dev" ]; then
-        dev_mode="true"
+# Find all HTML files recursively
+find "$search_dir" -type f -name "*.html" | while read -r file; do
+    if [[ "$mode" == "prod" ]]; then
+        # Production mode: Change docs/ to ./
+        sed -i '' 's|href="docs/|href="./|g' "$file"
+        sed -i '' 's|src="docs/|src="./|g' "$file"
+        echo "Processed (prod mode): $file"
     else
-        directory="$arg"
+        # Development mode: Change ./ to docs/
+        sed -i '' 's|href="./|href="docs/|g' "$file"
+        sed -i '' 's|src="./|src="docs/|g' "$file"
+        echo "Processed (dev mode): $file"
     fi
 done
 
-# Start traversing from the specified directory
-process_files "$directory" "$dev_mode"
-
-echo "HTML files processed."
+echo "All HTML files have been updated in $mode mode."
