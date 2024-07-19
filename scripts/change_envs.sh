@@ -14,14 +14,16 @@ fi
 # Find all HTML files recursively
 find "$search_dir" -type f -name "*.html" | while read -r file; do
     if [[ "$mode" == "prod" ]]; then
-        # Production mode: Change docs/ to ./
+        # Production mode: Change docs/ to ./ and update URL
         sed -i '' 's|href="docs/|href="./|g' "$file"
         sed -i '' 's|src="docs/|src="./|g' "$file"
+        sed -i '' 's|href="http://127.0.0.1:3000|href="https://www.cengizhanparlak.com|g' "$file"
         echo "Processed (prod mode): $file"
     else
-        # Development mode: Change ./ to docs/
+        # Development mode: Change ./ to docs/ and update URL
         sed -i '' 's|href="./|href="docs/|g' "$file"
         sed -i '' 's|src="./|src="docs/|g' "$file"
+        sed -i '' 's|href="https://www.cengizhanparlak.com|href="http://127.0.0.1:3000|g' "$file"
         echo "Processed (dev mode): $file"
     fi
 done
