@@ -26,18 +26,147 @@
       >
     </div>
     <!-- Breadcrumb end -->
-    <div class="blog-container">
+    <div class="blog-container blog-page">
       <section id="blog-post-01">
-        <h1 class="blog-header">coloring svgs in flutter</h1>
+        <h1>coloring svgs in flutter</h1>
 
-        <p class="blog-text">
-          i have been working on a project where i need to color svg images
-          dynamically. i have tried to use the color_filter package but it did
-          not work as expected. i have also tried to use the svg package but it
-          did not work as expected either. i have finally found a way to color
-          svg images dynamically and i would like to share it with you.
+        <p>
+          while using svgs in your app, you may be tempted or obliged to use
+          multiple, differently colored versions based on your app's theme. in a
+          case like this, if your svg file consists of a single color or
+          element, it is easy to get the job done. however, if your svg file
+          consists of multiple paths with various colors; strokes, and different
+          stroke colors, it becomes a bit more complicated.
+        </p>
+
+        <p>
+          i will try to ease your job a little by showing you how to color it
+          programmatically.
+        </p>
+        <p>
+          <a href="https://pub.dev/packages/flutter_svg" target="_blank"
+            >flutter_svg</a
+          >
+          package is mainly used to draw vector graphics in flutter. so, i will
+          give my example on that. i have the below graphic to use on my app:
+        </p>
+        <img
+          src="docs/assets/images/blog/flutter/svg_color_mapper/file.png"
+          alt="file icon, which consists of a folder and a plus sign. border and the plus sign is black, folder is yellow"
+        />
+
+        <pre>
+<code class="hljs language-xml">&lt;svg width="62" height="62" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;path d="M9.5 8V5.5H19.5V18.5H4.5V8.5H9C9.27614 8.5 9.5 8.27614 9.5 8Z" fill="#E7CA62"
+        stroke="black" stroke-linejoin="round" /&gt;
+    &lt;path d="M15 12V16M13 14H17" stroke="black" stroke-linecap="round" /&gt;
+&lt;/svg&gt;</code>
+</pre>
+
+        <p>
+          notice that it consists of 2 paths: file and plus sign, stroke for the
+          file path and different colors for path and strokes. package
+          contributors provided a way to substitute the colors while the svg is
+          parsing so you can change the color dynamically.
+        </p>
+
+        <h2>color mapper</h2>
+
+        <p>achieved by below:</p>
+
+        <pre>
+<code class="hljs language-dart">SvgPicture(
+    SvgAssetLoader(
+        'assets/svg/file.svg', // your file path
+        colorMapper: FileColorMapper(),
+    ),
+),</code></pre>
+
+        <p>
+          <b>filecolormapper</b> is a class extending the
+          <b>colormapper</b> (provided by the package). which then, we can
+          override its substitute method to manipulate colors on the svg.
+        </p>
+
+        <pre>
+<code class="hljs language-dart">import 'package:svg_color_mapper/custom_color_mapper.dart';
+
+class FileColorMapper extends ColorMapper {
+    const FileColorMapper();
+
+    @override
+    Color substitute(
+    String? id,
+    String elementName,
+    String attributeName,
+    Color color,
+    ) {
+    return color;
+    }
+}</code></pre>
+
+        <p>
+          id, elementname, attributename, color is populated by the svg file.
+          you can write your own logic to manipulate the color based on these
+          values. in this case, i am returning the color as is.
+        </p>
+
+        <p>remember the svg file:</p>
+
+        <pre>
+<code class="hljs language-xml">&lt;svg width="62" height="62" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;path d="M9.5 8V5.5H19.5V18.5H4.5V8.5H9C9.27614 8.5 9.5 8.27614 9.5 8Z" fill="#E7CA62"
+        stroke="black" stroke-linejoin="round" /&gt;
+    &lt;path d="M15 12V16M13 14H17" stroke="black" stroke-linecap="round" /&gt;
+&lt;/svg&gt;</code>
+</pre>
+
+        <p>
+          here, you see the fill color for first path (the folder part) is
+          #e7ca62<span class="color-box bg-yellow-500"></span>. so if i were to
+          paint this part as orange, i would update the substitute method
+          accordingly like below:
+        </p>
+
+        <pre>
+<code class="hljs language-dart">import 'package:svg_color_mapper/custom_color_mapper.dart';
+    
+class FileColorMapper extends ColorMapper {
+    const FileColorMapper();
+    
+    @override
+    Color substitute(
+        String? id,
+        String elementName,
+        String attributeName,
+        Color color,
+    ) {
+        if (color == const Color(0xFFe7ca62)) {
+        return Colors.orange;
+        }
+        return color;
+    }
+}</code></pre>
+
+        <p>and the result becomes this:</p>
+        <img
+          src="docs/assets/images/blog/flutter/svg_color_mapper/updated_file.png"
+          alt="updated file with orange color for folder, which was yellow"
+        />
+
+        <p></p>
+        <h2>complex coloring</h2>
+
+        <p>
+          updating the color based on design color is one thing, but if you find
+          yourself in a situtation where you need to do extensive changes on the
+          svg, just ask your designer to design more icons and let them earn
+          those big bucks. or, at the very least, ask for them to put an id to
+          all the elements. so you can easily manipulate the colors by using
+          ids.
         </p>
       </section>
     </div>
+    <script src="docs/js/highlight.js"></script>
   </body>
 </html>
