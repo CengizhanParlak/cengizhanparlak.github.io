@@ -32,7 +32,7 @@ p a {
 }
 
 #pfp-and-summary {
-  display: flex;
+  display: flow;
   align-items: center;
   justify-content: center;
   flex-direction: column;
