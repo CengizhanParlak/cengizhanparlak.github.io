@@ -18,9 +18,9 @@ function loadScripts() {
 
   document.head.appendChild(highlightStyle);
   document.head.appendChild(highlightScript);
-  document.head.appendChild(dartScript);
 
   highlightScript.onload = () => {
+    document.head.appendChild(dartScript);
     dartScript.onload = () => {
       highlightCode();
     };
@@ -29,18 +29,21 @@ function loadScripts() {
 
 function highlightCode() {
   hljs.highlightAll();
-  addEventListener("load", function () {
-    var blocks = document.querySelectorAll("pre code.hljs");
-    Array.prototype.forEach.call(blocks, function (block) {
-      var language = block.result.language;
-      block.parentElement.insertAdjacentHTML(
-        "beforeBegin",
-        `<div class="language-label-div"><label class="language-label">${language}</label></div>`
-      );
-    });
+  const blocks = document.querySelectorAll("pre code.hljs");
+  blocks.forEach((block) => {
+    const languageClass = Array.from(block.classList).find((cls) =>
+      cls.startsWith("language-")
+    );
+    const language = languageClass
+      ? languageClass.replace("language-", "")
+      : "unknown";
+    block.parentElement.insertAdjacentHTML(
+      "beforebegin",
+      `<div class="language-label-div"><label class="language-label">${language}</label></div>`
+    );
   });
 }
 
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
   loadScripts();
 });
