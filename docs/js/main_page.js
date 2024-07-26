@@ -41,7 +41,6 @@ function enableSection(button, section) {
     window.location.href = "blog";
     return;
   }
-  console.log("enabling section");
   disableLastSection();
   disableButton();
   section.classList.add(enabledClass);
